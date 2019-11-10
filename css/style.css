@@ -1,0 +1,628 @@
+/* All ------------------------------ */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #3f547f;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Mobile View ------------------------------ */
+
+h1{
+  font-size: 40px;
+  line-height: 1;
+  padding: 30px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px
+}
+
+nav li a.active {
+  text-transform: uppercase;
+  color: #ddd;
+}
+
+nav a{
+  color: #F58735;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.skip a{ /* skip to main */
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; 
+  top: -40px; 
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus{
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: top .1s ease-in;
+  transition: top .1s ease-in;
+}
+
+*:focus {
+  border: 2px solid black;
+}
+
+footer{
+  background-color: black;
+  font-size: 25px;
+  color: white;
+  grid-column: 1 / -1;  
+  grid-row: 6 / span 1;   
+  padding-top: 10px;
+  text-align: center;
+}
+
+footer p{
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+.container{ /* grid */
+  display: grid;
+  grid-template-columns: 100px 500px 100px;
+  grid-row-gap: 15px;
+  grid-template-rows: 30px auto auto auto auto 100px; 
+  width: 100vw; 
+}
+
+.nav{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);  
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  background-color: #303030;
+  padding: 30px; 
+  text-align: center; 
+}
+
+header{
+  color: #DDDDDD;
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+}
+
+.text-block{
+  align-self: center;
+  justify-self: center;
+  background-color:#DDDDDD;
+  border: 10px solid #F58735;
+  padding: 15px;
+}
+
+/* Index --------------------------*/
+
+.portrait{ 
+    max-height: 600px;
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    border: 10px solid #F58735;
+    overflow: hidden;
+}
+
+.portrait-img{
+  height: 600px;
+  width: 550px;
+}
+
+.about{ 
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    line-height: 1.5;
+  }
+
+.whytr{ 
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+    line-height: 1.5;
+}
+
+/* About --------------------------*/
+
+.abouttr{ 
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    line-height: 1.5;
+}
+
+.about-video{
+  height: 350px;
+  width: 550px;
+  border: 10px solid #F58735;
+}
+
+.video{ 
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.link{ 
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+    line-height: 1.5;
+}
+
+/* Internship --------------------------*/
+
+.brendonintern{ 
+  max-height: 400px;
+  grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+  border: 10px solid #F58735;
+  overflow: hidden;
+}
+
+.internship{ 
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 2;
+  line-height: 1.5;
+}
+
+.btintern-img{
+  height: 500px;
+  width: 700px;
+}
+
+/* Gallery --------------------------*/
+
+.gallery{ /* flexbox */
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 500px;
+  padding: 20px;
+}
+
+.gallery-img{
+  height: 300px;
+  width: 450px;
+  margin: 7.5px;
+}
+
+.galleryintro{
+  font-size: 20px;
+  margin: auto;
+  padding: 20px;
+  background-color: #F58735;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.gallery-header h1{
+  font-size: 50px;
+  padding: 20px;
+}
+
+.nav-gallery{
+  background: #303030;
+  text-align: center;
+  padding: 10px
+}
+
+.nav-gallery a{
+  font-size: 35px;
+}
+
+
+/* Contact --------------------------*/
+
+.animate{ /* animation for header */
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.btpic{ 
+  max-height: 400px;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 2;
+  padding: 0px 0px 30px 0px;
+  overflow: hidden;
+}
+
+.form{ 
+  color: black;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+  background-color: #F58735;
+  border: 10px solid #DDDDDD;
+  align-self: center;
+}
+
+input[type=text] {
+  font-size: 25px;
+  padding: 5px;
+  margin: 20px 10px;
+}
+
+input[type=email] {
+  font-size: 25px;
+  padding: 5px;
+  margin: 20px 10px;
+}
+
+textarea{
+  font-size: 20px;
+  padding: 5px;
+  margin: 20px 10px;
+}
+
+legend{
+  font-size: 30px;
+  padding: 15px;
+  text-align: center;
+}
+
+input[type=submit] {
+  background-color: white;
+  font-size: 20px;
+  padding: 5px;
+  margin: 10px;
+}
+
+label{
+  font-size: 30px;
+}
+
+.contactimg1{
+  height: 500px;
+  width: 650px;
+}
+
+.contactimg2{
+  height: 300px;
+  width: 720px;
+}
+
+/* Tablet View ---------------------------------- */
+
+@media screen and (min-width:800px){ 
+  .container{ /* Grid */
+    grid-template-columns: auto 500px auto;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  .nav{
+    padding: 30px; 
+    text-align: left; 
+  }
+
+  nav a{
+    font-size: 20px;
+  }
+
+  /* Index --------------------------*/
+
+  .portrait{ /* Index */
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    overflow: hidden;
+  } 
+
+  /* Internship ----------------------*/
+
+  .brendonintern{ /* Internship */
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+}
+
+/* Desktop View ----------------------*/
+
+@media screen and (min-width:1100px){
+
+  .container{
+    grid-template-columns: 200px auto auto auto auto;
+    grid-template-rows: 120px 400px auto 75px; 
+    grid-column-gap: 15px;
+  }
+
+  nav ul {
+    background-color: #303030;
+    height: 100%;
+  }
+
+  nav li a {
+    display: block;
+    font-size: 25px;
+    padding: 20px 0px 0px 0px;
+  }
+
+  nav li a.active {
+    color: #DDDDDD;
+  }
+
+  .nav{
+    display: grid;
+    grid-column: 1 / span 1;
+    grid-row: 1 / -1;
+    text-align: center;
+    padding: 0px;
+  }
+
+  header{
+    grid-column: 2 / -1;
+    grid-row: 1 / span 1;
+    font-weight: bold;
+    text-shadow: 
+      0 1px 0 #ccc, 
+      0 2px 0 #c9c9c9, 
+      0 6px 1px rgba(0,0,0,.1), 
+      0 0 5px rgba(0,0,0,.1), 
+      0 1px 3px rgba(0,0,0,.3), 
+      0 3px 5px rgba(0,0,0,.2), 
+      0 5px 10px rgba(0,0,0,.25), 
+      0 10px 10px rgba(0,0,0,.2), 
+      0 20px 20px rgba(0,0,0,.15);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 48px;
+  }
+
+  footer{
+    font-size: 20px;
+    grid-column: 2 / -1;  
+    grid-row: 4 / span 1;   
+  }
+  
+  /* Index --------------------------*/
+
+  .portrait{ /* Index */
+    max-height: 600px;
+    max-width: 500px;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+    margin-top: 20px;
+  }
+
+  .portrait-img{
+    height: 600px;
+    width: 550px;
+  }
+
+  .about{ /* Index */
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .whytr{ /* Index */
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+/* About --------------------------*/
+
+  .video{ /* About */
+    grid-column: 4 / span 1;
+    grid-row: 2/ span 1;
+    padding: 0px 30px 30px 30px;
+  }
+
+  .abouttr{ /* About */
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  .link{ /* About */
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 1;
+  }
+
+  /* Internship --------------------------*/
+  .brendonintern{ /* Internship */
+    max-height: 600px;
+    grid-column: 3/ span 2;
+    grid-row: 2 / span 1;
+  }
+
+  .internship{ /* Internship */
+    grid-column: 2 / -1 ;
+    grid-row: 3 / span 1;
+  }
+
+  .btintern-img{
+    height: 500px;
+    width: 700px;
+  }
+
+
+  /* Gallery --------------------------*/
+  .gallery-header{
+    font-weight: bold;
+    text-shadow: 
+      0 1px 0 #ccc, 
+      0 2px 0 #c9c9c9, 
+      0 6px 1px rgba(0,0,0,.1), 
+      0 0 5px rgba(0,0,0,.1), 
+      0 1px 3px rgba(0,0,0,.3), 
+      0 3px 5px rgba(0,0,0,.2), 
+      0 5px 10px rgba(0,0,0,.25), 
+      0 10px 10px rgba(0,0,0,.2), 
+      0 20px 20px rgba(0,0,0,.15);
+  }
+  .gallery-header h1{
+    padding: 30px;
+  }
+
+  .nav-gallery{
+    text-align: left;
+  }
+
+  .nav-gallery li a{
+    display: inline;
+    font-size: 20px;
+  }
+
+  .galleryintro{
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .gallery-header h1{
+    padding: 30px;
+  }
+
+  .gallery-img{
+    filter: grayscale(80%);
+  }
+
+  .gallery-img:hover{
+    filter: grayscale(0%);
+    margin: 0px;
+    border: 7.5px solid #F58735;
+  }
+  
+
+  /* Contact --------------------------*/
+
+  .btpic{ /* contact */
+    max-height: 400px;
+    grid-column: 2 / span 4;
+    grid-row: 2 / span 1;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .form{ /* contact */
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    padding: 20px;
+  }
+
+/* Flip card */
+  .flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .btpic:hover .flip{
+    transform: rotateY(180deg);
+  }
+
+  .flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-front {
+    background-color: #3f547f;
+  }
+
+  .flip-back {
+    background-color: #3f547f;
+    transform: rotateY(180deg);
+    font-size: 30px;
+  }
+
+/* Input */
+
+  input[type=text] {
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  input[type=email] {
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  textarea{
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  legend{
+    font-size: 25px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  input[type=submit] {
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  label{
+    font-size: 20px;
+  }
+  
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+      animation: none;
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: initial; 
+    transition: initial;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
