@@ -389,7 +389,7 @@ label{
     grid-column: 2 / -1;
     grid-row: 1 / span 1;
     font-weight: bold;
-    text-shadow: 
+    text-shadow:   /* Modified from CSS Newbies, hit the floor effect */
       0 1px 0 #ccc, 
       0 2px 0 #c9c9c9, 
       0 6px 1px rgba(0,0,0,.1), 
