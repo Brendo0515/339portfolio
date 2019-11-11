@@ -103,7 +103,7 @@ footer p{
   grid-row: 1 / span 1;
   background-color: #303030;
   padding: 30px; 
-  text-align: center; 
+  text-align: left; 
 }
 
 header{
@@ -330,7 +330,7 @@ label{
 
   .nav{
     padding: 30px; 
-    text-align: left; 
+    text-align: center; 
   }
 
   nav a{
